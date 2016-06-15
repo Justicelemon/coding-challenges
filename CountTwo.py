@@ -23,11 +23,11 @@ def solve(alg, n):
 
 # Brute Force: Iterate to n, appending each number to a string and then counting all 2s in the string
 def bruteForce(n):
-  stringArr = []
+  count = 0
   for x in range(1, n+1):
-    stringArr.append(str(x))
+    count += str(x).count('2')
 
-  return ''.join(stringArr).count('2')
+  return count
 
 # Count all occurences of 2 from right to left, start counting only the twos in the ones place, then tens, then hundreds, etc.
 def algorithm(n):
